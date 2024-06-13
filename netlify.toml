@@ -3,7 +3,7 @@
   publish = "staticfiles"
 
 [build.environment]
-  DJANGO_SETTINGS_MODULE = "your_project_name.settings"
+  DJANGO_SETTINGS_MODULE = "cloudsafe.settings"
 
 [[redirects]]
   from = "/api/*"
