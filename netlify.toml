@@ -8,9 +8,8 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/home.html"
   status = 200
-
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/django_handler"
