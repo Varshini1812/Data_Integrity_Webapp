@@ -1,37 +1,24 @@
-#  # The Dependencies for Machine Learning
+ # The Dependencies for Machine Learning
 
-# scikit-learn
-# pandas
-# numpy
-# matplotlib
+scikit-learn
+pandas
+numpy
+matplotlib
 
-# # The Dependencies for Cryptography
+# The Dependencies for Cryptography
 
-# pycryptodome
-# pycryptodomex
+pycryptodome
+pycryptodomex
 
-# # The Dependencies for Database
+# The Dependencies for Database
 
-# pymongo
+pymongo
 
-# # The Dependencies for Web
+# The Dependencies for Web
 
-# django
-# azure.cosmos
-
-
+django
+azure.cosmos
 
 
 
-# # Type this command in terminal : pip install -r requirements.txt
-
-
-scikit-learn==0.24.2
-pandas==1.2.4
-numpy==1.20.3
-matplotlib==3.4.2
-pycryptodome==3.10.1
-pycryptodomex==3.10.1
-pymongo==3.11.4
-django==3.2.4
-azure-cosmos==3.1.2
+# Type this command in terminal : pip install -r requirements.txt
