@@ -1,0 +1,94 @@
+<!-- {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task History</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="dash-nav">
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="#" class="active">Task History</a>
+            <a href="{% url 'logout' %}" class="logout">Logout</a>
+        </div>
+    </div>
+    <h1>Task History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Details</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in task_history %}
+            <tr>
+                <td>{{ task.details }}</td>
+                <td>{{ task.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html> -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="dash-nav">
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="#" class="active">Task History</a>
+            <a href="{% url 'logout' %}" class="logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">TPA Verification History</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Details</th>
+                        <th scope="col">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in task_history %}
+                    <tr>
+                        <td>{{ task.details }}</td>
+                        <td>{{ task.timestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

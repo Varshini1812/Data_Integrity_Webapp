@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Data</title>
+    <link rel="stylesheet" href="{% static 'css/dataquery.css' %}">
+    <script src="{% static 'js/queryscript.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="dash-nav">
+            {% if user.is_authenticated %}
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'logout' %}" class="logout">Logout</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="query-container">
+            <h2>Your Queries</h2>
+            <!-- Display a list of queries -->
+            {% for query in user_queries %}
+            <div class="query-card">
+                <div class="query-info">
+                    <h3 class="query-name">{{ query.name }}</h3>
+                    <p>Uploaded on: {{ query.creation_date }}</p>
+                </div>
+                <!-- Activate TPA button form -->
+                <form action="{% url 'activate_tpa' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="query_id" value="{{ query.id }}">
+                    <input class="activate-tpa-button" type="submit" value="Activate TPA">
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

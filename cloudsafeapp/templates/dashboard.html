@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="dash-nav">
+            <a href="#" class="active">Dashboard</a>
+            <a href="{% url 'logout' %}" class="logout">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="greeting">Hi, {{ user }}!</div>
+        <div class="button-container">
+            <div class="set-button">
+                <label> Upload CSV files securely to the cloud with password encryption.</label>
+                <a href="{% url 'upload' %}" class="button">Upload data</a>
+            </div>
+            <div class="set-button">
+                <label>Maintain data integrity by regularly checking it within set intervals.</label>
+                <a href="{% url 'querydata' %}" class="button">Query from data</a>
+            </div>
+            <div class="set-button">
+                <label>View your past tpa activities and operations about cloud data.</label>
+                <a href="{% url 'task_history' %}" class="button">Task History</a>
+            </div>
+            <div class="set-button">
+                <label>Here you can delete the data from the cloud DB which the user uploads.</label>
+                <a href="{% url 'fetch' %}" class="button">Delete data</a>
+            </div>
+        </div>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="card-container">
+                    <div class="popup-card {% if message.tags %}{{ message.tags }}{% endif %}">
+                        <img src="{% static 'images/success_logo.png' %}" alt="Message logo" class="popup-logo">
+                        <span class="popup-close" onclick="closePopup(this)">×</span>
+                        <p class="popup-message">{{ message }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+
+</html>

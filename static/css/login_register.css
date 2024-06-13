@@ -1,0 +1,195 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #e0f1f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    background-color: #00897B;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-size: 1.2rem;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.card-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+.card-container p
+{
+    margin-top: 12px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #898787;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #0b818f;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #165c67;
+}
+
+.popup-card {
+    position: fixed;
+    background-color: #fff;
+    bottom: 20px;
+    left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: flex;
+}
+
+
+
+.popup-card.error {
+    background-color: #ffe8ea;
+}
+
+.popup-card.success {
+    background-color: #eeffe8;
+}
+
+.popup-card+.popup-card {
+    bottom: calc(100% - 700px);
+}
+
+.popup-card+.popup-card+.popup-card {
+    bottom: calc(100% - 605px);
+}
+
+.popup-card img {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.popup-card p {
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    margin-left: 35px;
+    color: #757575;
+    
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-page
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Login-top
+{
+  position: relative;
+  right: 15px;
+
+}
+
+.Login-top a
+{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 3px 10px;
+    background-color:#00897B;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 2.5rem;
+
+}
+
+.login-page #heading
+{
+    font-size: 2rem !important;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.Login-top a:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: white;
+    transition: 0.5s ease;
+}
+
+label
+{
+    float: left;
+    padding-bottom: 3px;
+    font-weight: 500;
+}
