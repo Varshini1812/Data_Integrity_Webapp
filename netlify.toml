@@ -6,6 +6,10 @@
   DJANGO_SETTINGS_MODULE = "cloudsafe.settings"
   PYTHON_VERSION = "3.8"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/api/*"
